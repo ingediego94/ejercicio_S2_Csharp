@@ -8,19 +8,19 @@
     "net8.0": []
   },
   "packageFolders": {
-    "/home/diego/.nuget/packages/": {}
+    "/home/dv/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/diego/Documents/diego_dev/ejercicio_S2_Csharp/ejercicio_S2_Csharp.csproj",
+      "projectUniqueName": "/home/dv/Documents/diego_dev/ejercicio_S2_Csharp/ejercicio_S2_Csharp.csproj",
       "projectName": "ejercicio_S2_Csharp",
-      "projectPath": "/home/diego/Documents/diego_dev/ejercicio_S2_Csharp/ejercicio_S2_Csharp.csproj",
-      "packagesPath": "/home/diego/.nuget/packages/",
-      "outputPath": "/home/diego/Documents/diego_dev/ejercicio_S2_Csharp/obj/",
+      "projectPath": "/home/dv/Documents/diego_dev/ejercicio_S2_Csharp/ejercicio_S2_Csharp.csproj",
+      "packagesPath": "/home/dv/.nuget/packages/",
+      "outputPath": "/home/dv/Documents/diego_dev/ejercicio_S2_Csharp/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/diego/.nuget/NuGet/NuGet.Config"
+        "/home/dv/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"

@@ -17,9 +17,13 @@ namespace ejercicio_S2_Csharp.Models
             Dni = dni;
         }
 
-        public void DisplayCostumerInfo()
+        public void Login()
         {
-            Console.WriteLine($"Customer Info: {Name} {Lastname}, Email: {Email}, Age: {Age}");
-        }
+            Console.WriteLine($"Login Clientes \nCustomer Info: {Name} {Lastname}, Email: {Email}, Age: {Age}");
+        }   
+        
+        
+        
+        
     }
 }

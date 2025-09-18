@@ -19,11 +19,7 @@ public class Person
     }
     
     
-    // Common methods
-    public void Login()
-    {
-        Console.WriteLine($"{Name} has ingresado al sistema.");
-    }
+
     
     
 }
