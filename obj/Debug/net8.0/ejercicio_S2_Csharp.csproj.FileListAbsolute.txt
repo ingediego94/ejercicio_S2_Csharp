@@ -1,0 +1,14 @@
+/home/diego/Documents/diego_dev/ejercicio_S2_Csharp/bin/Debug/net8.0/ejercicio_S2_Csharp
+/home/diego/Documents/diego_dev/ejercicio_S2_Csharp/bin/Debug/net8.0/ejercicio_S2_Csharp.deps.json
+/home/diego/Documents/diego_dev/ejercicio_S2_Csharp/bin/Debug/net8.0/ejercicio_S2_Csharp.runtimeconfig.json
+/home/diego/Documents/diego_dev/ejercicio_S2_Csharp/bin/Debug/net8.0/ejercicio_S2_Csharp.dll
+/home/diego/Documents/diego_dev/ejercicio_S2_Csharp/bin/Debug/net8.0/ejercicio_S2_Csharp.pdb
+/home/diego/Documents/diego_dev/ejercicio_S2_Csharp/obj/Debug/net8.0/ejercicio_S2_Csharp.GeneratedMSBuildEditorConfig.editorconfig
+/home/diego/Documents/diego_dev/ejercicio_S2_Csharp/obj/Debug/net8.0/ejercicio_S2_Csharp.AssemblyInfoInputs.cache
+/home/diego/Documents/diego_dev/ejercicio_S2_Csharp/obj/Debug/net8.0/ejercicio_S2_Csharp.AssemblyInfo.cs
+/home/diego/Documents/diego_dev/ejercicio_S2_Csharp/obj/Debug/net8.0/ejercicio_S2_Csharp.csproj.CoreCompileInputs.cache
+/home/diego/Documents/diego_dev/ejercicio_S2_Csharp/obj/Debug/net8.0/ejercicio_S2_Csharp.dll
+/home/diego/Documents/diego_dev/ejercicio_S2_Csharp/obj/Debug/net8.0/refint/ejercicio_S2_Csharp.dll
+/home/diego/Documents/diego_dev/ejercicio_S2_Csharp/obj/Debug/net8.0/ejercicio_S2_Csharp.pdb
+/home/diego/Documents/diego_dev/ejercicio_S2_Csharp/obj/Debug/net8.0/ejercicio_S2_Csharp.genruntimeconfig.cache
+/home/diego/Documents/diego_dev/ejercicio_S2_Csharp/obj/Debug/net8.0/ref/ejercicio_S2_Csharp.dll
