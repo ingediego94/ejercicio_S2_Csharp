@@ -1,5 +1,6 @@
 ﻿using System;
 using ejercicio_S2_Csharp.Models;
+using ejercicio_S2_Csharp.Services;
 
 namespace ejercicio_S2_Csharp;
 
@@ -35,6 +36,8 @@ public class Program
         Console.WriteLine(admin.Id_admin);
 
         customer1.Login();
+        
+        GeneralFunc.Menu();
         
 
     }

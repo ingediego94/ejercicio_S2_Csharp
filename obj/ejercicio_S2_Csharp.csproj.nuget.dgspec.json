@@ -1,25 +1,31 @@
 {
   "format": 1,
   "restore": {
-    "/home/dv/Documents/diego_dev/ejercicio_S2_Csharp/ejercicio_S2_Csharp.csproj": {}
+    "F:\\Programacion\\RIWI\\ejercicio_S2_Csharp\\ejercicio_S2_Csharp.csproj": {}
   },
   "projects": {
-    "/home/dv/Documents/diego_dev/ejercicio_S2_Csharp/ejercicio_S2_Csharp.csproj": {
+    "F:\\Programacion\\RIWI\\ejercicio_S2_Csharp\\ejercicio_S2_Csharp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/dv/Documents/diego_dev/ejercicio_S2_Csharp/ejercicio_S2_Csharp.csproj",
+        "projectUniqueName": "F:\\Programacion\\RIWI\\ejercicio_S2_Csharp\\ejercicio_S2_Csharp.csproj",
         "projectName": "ejercicio_S2_Csharp",
-        "projectPath": "/home/dv/Documents/diego_dev/ejercicio_S2_Csharp/ejercicio_S2_Csharp.csproj",
-        "packagesPath": "/home/dv/.nuget/packages/",
-        "outputPath": "/home/dv/Documents/diego_dev/ejercicio_S2_Csharp/obj/",
+        "projectPath": "F:\\Programacion\\RIWI\\ejercicio_S2_Csharp\\ejercicio_S2_Csharp.csproj",
+        "packagesPath": "C:\\Users\\57350\\.nuget\\packages\\",
+        "outputPath": "F:\\Programacion\\RIWI\\ejercicio_S2_Csharp\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "/home/dv/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\57350\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -32,6 +38,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -53,7 +64,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.119/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
