@@ -14,14 +14,18 @@ namespace ejercicio_S2_Csharp.Services
 
             while (true)
             {
+                Console.Write("\x1b[1m");
                 Console.ForegroundColor = ConsoleColor.Cyan;
                 Console.WriteLine(new string('=', 30));
                 Console.WriteLine("|       RIWI MUSIC MENU      |");
                 Console.WriteLine(new string('=', 30));
+                Console.Write("\x1b[0m");
                 Console.ResetColor();
                 Console.WriteLine(
                     "1) Gestión de conciertos.\n2) Gestión de clientes. \n3) Gestión de tiquetes. \n4) Historial de compras. \n5) Consultas avanzadas (LINQ). \n0) Salir.");
+                Console.Write("\x1b[1m");
                 Console.Write("\nEscribe la opción que deseas realizar:  ");
+                Console.Write("\x1b[0m");
                 
                 int optionMainMenu = TryConvertInputToNumber();
                 
@@ -64,27 +68,27 @@ namespace ejercicio_S2_Csharp.Services
             switch (option_x)
             {
                 case 1:
-                    Console.WriteLine("1) Gestión de Conciertos:");
+                    Console.WriteLine("* Gestión de Conciertos:");
                     ConcertsManagement();
                     break;
                 case 2:
-                    Console.WriteLine("2) Gestión de Clientes:");
+                    Console.WriteLine("* Gestión de Clientes:");
                     ClientsManagement();
                     break;
                 case 3:
-                    Console.WriteLine("3) Gestión de Tiquetes:");
+                    Console.WriteLine("* Gestión de Tiquetes:");
                     TicketsManagement();
                     break;
                 case 4:
-                    Console.WriteLine("4) Historial de Compras:");
+                    Console.WriteLine("* Historial de Compras:");
                     PurchaseHistory();
                     break;
                 case 5:
-                    Console.WriteLine("5) Consultas Avanzadas (LINQ):");
+                    Console.WriteLine("* Consultas Avanzadas (LINQ):");
                     AdvancedQueries();
                     break;
                 case 0:
-                    Console.WriteLine("6) Saliendo del sistema...");
+                    Console.WriteLine("* Saliendo del sistema...");
                     Exiting();
                     return true;
                 default:
@@ -105,7 +109,9 @@ namespace ejercicio_S2_Csharp.Services
         public static void ConcertsManagement()
         {
             Console.WriteLine("\t1) Registrar concierto. \n\t2) Listar conciertos. \n\t3) Editar concierto. \n\t4) Eliminar concierto.");
+            Console.Write("\x1b[1m");
             Console.Write("\nEscribe la opción que deseas realizar:  ");
+            Console.Write("\x1b[0m");
             int opSpecMenu = TryConvertInputToNumber();
             
             switch (opSpecMenu)
@@ -138,7 +144,9 @@ namespace ejercicio_S2_Csharp.Services
             Console.WriteLine("ClientsManagement()");
             
             Console.WriteLine("\t1) Registrar cliente. \n\t2) Listar clientes. \n\t3) Editar cliente. \n\t4) Eliminar cliente.");
+            Console.Write("\x1b[1m");
             Console.Write("\nEscribe la opción que deseas realizar:  ");
+            Console.Write("\x1b[0m");
             int opSpecMenu = TryConvertInputToNumber();
             
             // hacer switch
@@ -152,7 +160,9 @@ namespace ejercicio_S2_Csharp.Services
             Console.WriteLine("TicketsManagement()");
             
             Console.WriteLine("\t1) Registrar compra de tiquete. \n\t2) Listar tiquetes vendidos. \n\t3) Editar compra. \n\t4) Eliminar compra.");
+            Console.Write("\x1b[1m");
             Console.Write("\nEscribe la opción que deseas realizar:  ");
+            Console.Write("\x1b[0m");
             int opSpecMenu = TryConvertInputToNumber();
             
             // hacer switch
@@ -176,7 +186,9 @@ namespace ejercicio_S2_Csharp.Services
             
             Console.WriteLine("\t1) Consultar clientes por ciudad. \n\t2) Consultar conciertos por rango de fechas. \n\t3) Consultar el concierto con as tiquetes vendidos. " +
                               "\n\t4) Consultar ingresos totales de un concierto. \n\t5) Consultar cliente con más compras realizadas.");
+            Console.Write("\x1b[1m");
             Console.Write("\nEscribe la opción que deseas realizar:  ");
+            Console.Write("\x1b[0m");
             int opSpecMenu = TryConvertInputToNumber();
             
             // hacer switch

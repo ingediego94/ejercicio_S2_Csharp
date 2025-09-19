@@ -4,8 +4,27 @@ using ejercicio_S2_Csharp.Services;
 
 namespace ejercicio_S2_Csharp;
 
+using static Concert;       // To call a class without point 
+using static Services.ConcertsCrud;
+
 public class Program
 {
+    // public static int Login()
+    // {
+    //     // menu para saber quien va a iniciar // var type;
+    //     
+    //     // Verificar correo
+    //     // Verificar contraseña
+    //     // Iniciar sesión usando type para saber a que menu acceder.
+    //     
+    //     // menuArtist();
+    //     // menuAdmin();
+    //     // menuCustomer();
+    //     
+    //     CreateConcert();
+    // }
+    
+    
     public static void Main(string[] args)
     {
         // Creating an instance of customer:
@@ -32,6 +51,9 @@ public class Program
             password:"12345rea"
             
             );
+        
+        // creating an instance of Concert:
+        var concerts = new Concert {Id_Concert = 100, Date = new DateTime(2025, 12,03)};
         
         Console.WriteLine(admin.Id_admin);
 
