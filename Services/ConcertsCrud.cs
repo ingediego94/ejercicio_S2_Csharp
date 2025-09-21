@@ -14,12 +14,11 @@ public class ConcertsCrud
     // Method to Register a new concert:
     public static void RegisteringConcert()
     {
-
         
         // Establishing a date by default:
         DateTime tempDate = default;
         
-        Console.WriteLine("CREAR NUEVO CONCIERTO.");
+        Console.WriteLine("CREAR NUEVO CONCIERTO.\n");
         
         Guid idConcert = Guid.NewGuid();
         Console.WriteLine($"Id del concierto: {idConcert}");
@@ -69,10 +68,11 @@ public class ConcertsCrud
         };
 
         concerts.Add(newConcert);
-        
-        Console.WriteLine("\nConcierto creado correctamente. \nResumen de datos:");
-        
+
+        Console.ForegroundColor = ConsoleColor.Green;
+        Console.WriteLine("\nConcierto creado correctamente. \n \nResumen de datos:");
         ConcertResume(newConcert);
+        Console.ResetColor();
         
     }
 
@@ -101,11 +101,11 @@ public class ConcertsCrud
     // Method to List all concerts:
     public static void ListingConcerts()
     {
-        Console.WriteLine("LISTAR TODOS LOS CONCIERTOS.");
+        Console.WriteLine("LISTAR TODOS LOS CONCIERTOS.\n");
 
         if (concerts.Count() > 0 )
         {
-            Console.WriteLine($"Total de conciertos: {concerts.Count()}");
+            Console.WriteLine($"Total de conciertos: {concerts.Count()}.\n");
 
             foreach (var oneConcert in concerts)
             {
@@ -131,9 +131,84 @@ public class ConcertsCrud
     
     public static void EditingConcert()
     {
-        Console.WriteLine("EDITAR UN CONCIERTO.");
+        Console.WriteLine("\nEDITAR UN CONCIERTO.\n");
 
-        
+        Console.WriteLine("Escribe el ID del cocierto que deseas editar: ");
+        string imputGuidEdit = Console.ReadLine().Trim();
+        if (Guid.TryParse(imputGuidEdit, out Guid idToEditConcert))
+        {
+            Console.WriteLine($"\nID válido: {idToEditConcert}");
+            var concertEdit = concerts.FirstOrDefault(c => c.Id_Concert == idToEditConcert);
+            if (concertEdit != null)
+            {
+                Console.WriteLine("Concierto encontrado. Datos actuales:");
+                ConcertResume(concertEdit);
+
+                Console.WriteLine("\n---  Editar Campos  ---");
+
+                // Edit concert's name:
+                Console.Write($" - Nuevo nombre (actual: {concertEdit.ConcertName}): ");
+                string newName = Console.ReadLine().Trim();
+                if (!string.IsNullOrEmpty(newName)) concertEdit.ConcertName = newName;
+                
+                // Edit concert's city:
+                Console.Write($" - Nueva ciudad (actual: {concertEdit.City}): ");
+                string newCity = Console.ReadLine().Trim();
+                if (!string.IsNullOrEmpty(newCity)) concertEdit.City = newCity;
+                
+                // Edit concert's date:
+                Console.WriteLine($" - Nueva fecha (actual: {concertEdit.Date.ToString("g")}): ");
+                Console.Write("     ¿Quieres cambiar la fecha? (si/no): ");
+                if (Console.ReadLine().Trim().ToLower() == "si")
+                {
+                    DateTime tempDate = concertEdit.Date;
+                    concertEdit.Date = DatesHoursFunc.ReturnDate(tempDate);
+                }
+                
+                // Edit concert's people capacity:
+                Console.WriteLine($" - Nueva capacidad (actual: {concertEdit.Capacity})");
+                Console.Write("     Quieres cambiar la capacidad del evento? (si/no)");
+                if (Console.ReadLine().Trim().ToLower() == "si")
+                {
+                    concertEdit.Capacity = GeneralFunc.TryConvertInputToNumber();
+                }
+                
+                // Edit concert's artists list:
+                Console.WriteLine($" - ¿Quieres modificar los artistas asistentes? (si/no): ");
+                if (Console.ReadLine().Trim().ToLower() == "si")
+                {
+                    var newArtists = new List<string>();
+                    string again;
+                    while (true)
+                    {
+                        Console.WriteLine("    Escribe el nombre del artista: ");
+                        string artist = Console.ReadLine().Trim();
+                        if(!string.IsNullOrEmpty(artist))
+                            newArtists.Add(artist);
+                        Console.WriteLine("\t    ¿Deseas agregar otro artista? (si/no): ");
+                        again = Console.ReadLine().Trim().ToLower();
+                        if (again != "si")
+                            break;
+                    }
+                    concertEdit.Artists = newArtists;
+                }
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine("\nConcierto editado con éxito. Nuevos datos:");
+                Console.ResetColor();
+                ConcertResume(concertEdit);
+            }
+            else
+            {
+                Console.WriteLine("No se encontró un concierto con ese ID.");
+            }
+        }
+        else
+        {
+            Console.ForegroundColor = ConsoleColor.DarkRed;
+            Console.WriteLine("El ID ingresado no es válido.");
+            Console.ResetColor();
+        }
+
     }
     
     
@@ -146,14 +221,14 @@ public class ConcertsCrud
         {
             Console.WriteLine("Escribe el ID del concierto que deseas eliminar: ");
             
-            string imputGuid = Console.ReadLine().Trim();
+            string imputGuidConcEdit = Console.ReadLine().Trim();
             
-            if (Guid.TryParse(imputGuid, out Guid idToDelete))
+            if (Guid.TryParse(imputGuidConcEdit, out Guid idToDeleteConcert))
             {
-                Console.WriteLine($"ID válido: {idToDelete}");
+                Console.WriteLine($"ID válido: {idToDeleteConcert}");
                 
                 // To search the ID concert:
-               var concertToDelete = concerts.FirstOrDefault(c => c.Id_Concert == idToDelete);
+               var concertToDelete = concerts.FirstOrDefault(c => c.Id_Concert == idToDeleteConcert);
             
                 if (concertToDelete != null)
                 {
@@ -174,7 +249,9 @@ public class ConcertsCrud
                 Console.ForegroundColor = ConsoleColor.DarkRed;
                 Console.WriteLine("El ID ingresado no es válido. Intenta de nuevo.");
                 Console.ResetColor();
-                
+                Console.WriteLine("Presiona '0' para cancelar ");
+                if (imputGuidConcEdit == "0") break;
+
             }
 
 

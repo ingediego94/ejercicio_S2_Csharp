@@ -37,7 +37,6 @@ namespace ejercicio_S2_Csharp.Services
 
                 Console.WriteLine("\nPresiona ENTER para volver al menú..."); // +++++++++++++++
                 Console.ReadLine();
-                Console.Clear();
             }
         }
 
@@ -122,7 +121,7 @@ namespace ejercicio_S2_Csharp.Services
                     ConcertsCrud.ListingConcerts();
                     break;
                 case 3:
-                    Console.WriteLine("EditingConcert()");
+                    ConcertsCrud.EditingConcert();
                     break;
                 case 4:
                     ConcertsCrud.DeletingConcert();
