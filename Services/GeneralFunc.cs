@@ -52,7 +52,7 @@ namespace ejercicio_S2_Csharp.Services
                 if (int.TryParse(input, out toNumber))
                 {
                     return toNumber;
-                    continue;
+                    //continue;
                 }
                 Console.ForegroundColor = ConsoleColor.DarkRed;
                 Console.WriteLine("\nOpción inválida. Ingrese un número.");
@@ -89,7 +89,6 @@ namespace ejercicio_S2_Csharp.Services
                     break;
                 case 0:
                     Console.WriteLine("* Saliendo del sistema...");
-                    Exiting();
                     return true;
                 default:
                     Console.ForegroundColor = ConsoleColor.DarkRed;
@@ -117,16 +116,16 @@ namespace ejercicio_S2_Csharp.Services
             switch (opSpecMenu)
             {
                 case 1:
-                    Console.WriteLine("RegisteringConcert()");
+                    ConcertsCrud.RegisteringConcert();
                     break;
                 case 2:
-                    Console.WriteLine("ListingConcerts()");
+                    ConcertsCrud.ListingConcerts();
                     break;
                 case 3:
                     Console.WriteLine("EditingConcert()");
                     break;
                 case 4:
-                    Console.WriteLine("DeletingConcert");
+                    ConcertsCrud.DeletingConcert();
                     break;
                 default:
                     Console.ForegroundColor = ConsoleColor.DarkRed;
@@ -195,11 +194,6 @@ namespace ejercicio_S2_Csharp.Services
         }
 
         
-        // 6) Exiting
-        public static void Exiting()
-        {
-            Console.WriteLine("Salir");
-        }
     }
 
 }
