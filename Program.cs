@@ -27,12 +27,12 @@ public class Program
     
     public static void Main(string[] args)
     {
-        GeneralFunc.Menu();
-        
+        //GeneralFunc.Menu();
+        //Person.Register();
+        Customer.Register();
 
-        
-        
-        
+
+
         // Customer customer1 = new Customer(
         //     idCustomer:1,
         //     name:"diego",
@@ -53,7 +53,7 @@ public class Program
         //     password:"12345rea"
         //     
         //     );
-        
+
         //customer1.Login();
 
     }
